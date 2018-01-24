@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 12, 2014 11:13:51 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="pojos.R_Passengers" table="R_PASSENGERS">
+        <id name="passengerId" type="int">
+            <column name="PASSENGERID" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="busDetails" class="pojos.R_BusDetails" fetch="join">
+            <column name="BUSDETAILS" />
+        </many-to-one>
+        <many-to-one name="seat" class="pojos.R_Seat" fetch="join">
+            <column name="SEAT" />
+        </many-to-one>
+        <property name="departure" type="java.sql.Time">
+            <column name="DEPARTURE" />
+        </property>
+        <property name="doj" type="java.util.Date">
+            <column name="DOJ" />
+        </property>
+    </class>
+</hibernate-mapping>

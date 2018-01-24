@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 12, 2014 11:13:51 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="pojos.R_Booking" table="R_BOOKING">
+        <id name="seatId" type="java.lang.String">
+            <column name="SEATID" />
+            <generator class="increment" />
+        </id>
+        <property name="bookingId" type="int">
+            <column name="BOOKINGID" />
+        </property>
+        <many-to-one name="customer" class="pojos.R_Customer" fetch="join">
+            <column name="CUSTOMER" />
+        </many-to-one>
+        <many-to-one name="busDetails" class="pojos.R_BusDetails" fetch="join">
+            <column name="BUSDETAILS" />
+        </many-to-one>
+        <property name="doj" type="java.util.Date">
+            <column name="DOJ" />
+        </property>
+        <property name="dob" type="java.util.Date">
+            <column name="DOB" />
+        </property>
+        <property name="customer_source" type="java.lang.String">
+            <column name="CUSTOMER_SOURCE" />
+        </property>
+        <property name="customer_destination" type="java.lang.String">
+            <column name="CUSTOMER_DESTINATION" />
+        </property>
+        <property name="NOS" type="int">
+            <column name="NOS" />
+        </property>
+        <property name="status" type="java.lang.String">
+            <column name="STATUS" />
+        </property>
+        <property name="totalFare" type="float">
+            <column name="TOTALFARE" />
+        </property>
+    </class>
+</hibernate-mapping>

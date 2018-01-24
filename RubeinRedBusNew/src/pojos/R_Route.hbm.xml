@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 12, 2014 3:53:48 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="pojos.R_Route" table="R_ROUTE">
+        <id name="routeId" type="int">
+            <column name="ROUTEID" />
+            <generator class="increment" />
+        </id>
+        <property name="stops" type="java.lang.String">
+            <column name="STOPS" />
+        </property>
+    </class>
+</hibernate-mapping>
